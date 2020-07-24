@@ -104,6 +104,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3-x64-mingw32)
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -142,7 +143,12 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.1)
     regexp_parser (1.7.1)
+    rename (1.0.6)
+      activesupport
+      rails (>= 3.0.0)
+      thor (>= 0.19.1)
     rubyzip (2.3.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -164,6 +170,7 @@ GEM
       rubyzip (>= 1.2.2)
     semantic-ui-sass (2.4.2.0)
       sass (>= 3.2)
+    shutup (0.1.2)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -213,11 +220,15 @@ DEPENDENCIES
   hirb
   jbuilder (~> 2.7)
   jquery-rails
+  pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.1)
+  redis
+  rename
   sass-rails (>= 6)
   selenium-webdriver
   semantic-ui-sass
+  shutup
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data

@@ -7,9 +7,13 @@ ruby '2.6.6'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 
 gem 'bcrypt', '~>3.1.7'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 
+gem 'redis'
+
+gem 'shutup'
+
+gem 'rename'
+# Use sqlite3 as the database for Active Record
 gem 'hirb'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -37,6 +41,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -53,6 +58,11 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
