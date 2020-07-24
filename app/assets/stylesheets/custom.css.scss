@@ -1,0 +1,17 @@
+
+@import "semantic-ui";
+
+.chatbox{
+  height: 400px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 4px;
+  border-top: 1px solid cornflowerblue;
+}
+
+#messages{
+  overflow: auto;
+}
